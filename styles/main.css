@@ -71,3 +71,16 @@ button[type="submit"]:hover {
     background: #e8491d;
 }
 
+.gallery {
+    text-align: center;
+}
+
+.gallery img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.controls button {
+    margin: 10px;
+    padding: 10px;
+}
