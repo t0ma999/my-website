@@ -14,3 +14,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     });
 });
+
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Форма отправлена! (Это демо, данные никуда не отправляются)');
+        this.reset();
+    });
+}
+
+const images = [
+    "../images/1.jpg",
+    "../images/2.jpg",
+    "../images/3.jpg"
+];
+
+let current = 0;
+
+function showImage() {
+    document.getElementById("mainImage").src = images[current];
+}
+
+function nextImage() {
+    current = (current + 1) % images.length;
+    showImage();
+}
+
+function prevImage() {
+    current = (current - 1 + images.length) % images.length;
+    showImage();
+}
